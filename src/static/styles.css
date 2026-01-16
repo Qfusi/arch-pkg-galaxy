@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  background: #0b0e14;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#graph {
+  width: 100vw;
+  height: 100vh;
+}
+
+#controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+}
+
+#search-container {
+  position: relative;
+  margin-bottom: 20px;
+  pointer-events: all;
+}
+
+#search-input {
+  width: 25vw;
+  padding: 1.2vh 1.5vw;
+  background: rgba(15, 23, 35, 0.95);
+  border: 3px solid #5294e2;
+  border-radius: 12px;
+  color: white;
+  font-family: inherit;
+  font-size: 2vh;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#search-input:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(82, 148, 226, 0.5);
+}
+
+#search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 23, 35, 0.98);
+  border: 3px solid #5294e2;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  max-height: 50vh;
+  overflow-y: auto;
+  display: none;
+  z-index: 10001;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.search-dropdown.active {
+  display: block;
+}
+
+.search-result {
+  padding: 1.2vh 1.5vw;
+  color: white;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.15s;
+  font-size: 1.8vh;
+}
+
+.search-result:hover,
+.search-result.highlighted {
+  background-color: rgba(82, 148, 226, 0.5);
+}
+
+.search-result:last-child {
+  border-bottom: none;
+}
+
+#popover {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25vw !important;
+  min-width: 350px;
+  max-width: 600px;
+
+  background: rgba(15, 23, 35, 0.98) !important;
+  border: 2px solid #5294e2 !important;
+  border-radius: 12px;
+  padding: 2vw !important;
+
+  color: white !important;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  pointer-events: all;
+  backdrop-filter: blur(10px);
+}
+
+#popover h2 {
+  font-size: 1.8vw !important;
+  margin: 0 0 1vh 0;
+}
+
+#popover p {
+  font-size: 1.2vw !important;
+}
+
+#popover strong {
+  color: #5294e2;
+  font-size: 1vw !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  color: #ff5555;
+  font-size: 30px;
+}
+
+.wiki-link {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  background: #5294e2;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1vw;
+}

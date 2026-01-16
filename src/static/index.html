@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arch Package Galaxy</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://unpkg.com/d3"></script>
+    <script src="https://unpkg.com/force-graph"></script>
+</head>
+
+<body>
+    <div id="controls">
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search packages...">
+            <div id="search-dropdown" class="search-dropdown"></div>
+        </div>
+    </div>
+    <div id="graph"></div>
+    <div id="popover">
+        <span class="close-btn" onclick="closePopover()">×</span>
+        <h2 id="p-name">Package Name</h2>
+        <p><strong>Repository:</strong> <span id="p-repo"></span></p>
+        <p><strong>Install Size:</strong> <span id="p-size"></span></p>
+        <p><strong>Dependencies:</strong> <span id="p-deps"></span></p>
+        <a id="p-wiki" class="wiki-link" target="_blank">View on ArchWiki</a>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
